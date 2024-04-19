@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "94905772870",
+    "project_id": "dater-4992c",
+    "storage_bucket": "dater-4992c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94905772870:android:42855687381439f7cb9347",
+        "android_client_info": {
+          "package_name": "com.bambo.social"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmZnCuq1U6mdCYwk4AMToBMIEcZqFQh9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94905772870:android:cb740c2dd46f7031cb9347",
+        "android_client_info": {
+          "package_name": "com.eshopsingle.customer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmZnCuq1U6mdCYwk4AMToBMIEcZqFQh9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
