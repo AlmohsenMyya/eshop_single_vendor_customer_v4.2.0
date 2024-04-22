@@ -175,13 +175,14 @@ class _HomePageState extends State<HomePage>
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        _deliverPincode(),
+                        // _deliverPincode(),
                         _getSearchBar(),
+                        _slider(),
                         _catList(),
                         const SizedBox(
                           height: 5,
                         ),
-                        _slider(),
+                        // _slider(),
                         const BrandsListWidget(),
                         _section(),
                         _mostLike(),
