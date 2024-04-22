@@ -292,11 +292,13 @@ class HomePageState extends State<Dashboard>
     if (_selBottom == 1) {
       title = getTranslated(context, 'CATEGORY');
     } else if (_selBottom == 2) {
-      title = getTranslated(context, 'OFFER');
-    } else if (_selBottom == 3) {
       title = getTranslated(context, 'MYBAG');
-    } else if (_selBottom == 4) {
+      // title = getTranslated(context, 'OFFER');
+    } else if (_selBottom == 3) {
       title = getTranslated(context, 'PROFILE');
+      // title = getTranslated(context, 'MYBAG');
+    } else if (_selBottom == 4) {
+      // title = getTranslated(context, 'PROFILE');
     }
 
     return AppBar(
