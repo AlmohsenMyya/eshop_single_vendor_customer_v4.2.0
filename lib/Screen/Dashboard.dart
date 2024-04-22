@@ -170,7 +170,7 @@ class HomePageState extends State<Dashboard>
                 children: const [
                   HomePage(),
                   AllCategory(),
-                  FlashSale(),
+                  // FlashSale(),
                   // Sale(),
                   Cart(
                     fromBottom: true,
@@ -448,32 +448,32 @@ class HomePageState extends State<Dashboard>
                     title: Text(getTranslated(context, 'category')!,
                         overflow: TextOverflow.ellipsis, softWrap: true),
                     activeColor: colors.primary),
-                BottomBarItem(
-                  icon: _selBottom == 2
-                      ? SvgPicture.asset(
-                          "${imagePath}sale02.svg",
-                          colorFilter: const ColorFilter.mode(
-                              colors.primary, BlendMode.srcIn),
-                          width: 18,
-                          height: 20,
-                        )
-                      : SvgPicture.asset(
-                          "${imagePath}sale.svg",
-                          colorFilter: const ColorFilter.mode(
-                              colors.primary, BlendMode.srcIn),
-                          width: 18,
-                          height: 20,
-                        ),
-                  title: Text(getTranslated(context, 'SALE')!,
-                      overflow: TextOverflow.ellipsis, softWrap: true),
-                  activeColor: colors.primary,
-                ),
+                // BottomBarItem(
+                //   icon: _selBottom == 2
+                //       ? SvgPicture.asset(
+                //           "${imagePath}sale02.svg",
+                //           colorFilter: const ColorFilter.mode(
+                //               colors.primary, BlendMode.srcIn),
+                //           width: 18,
+                //           height: 20,
+                //         )
+                //       : SvgPicture.asset(
+                //           "${imagePath}sale.svg",
+                //           colorFilter: const ColorFilter.mode(
+                //               colors.primary, BlendMode.srcIn),
+                //           width: 18,
+                //           height: 20,
+                //         ),
+                //   title: Text(getTranslated(context, 'SALE')!,
+                //       overflow: TextOverflow.ellipsis, softWrap: true),
+                //   activeColor: colors.primary,
+                // ),
                 BottomBarItem(
                   icon: Selector<UserProvider, String>(
                     builder: (context, data, child) {
                       return Stack(
                         children: [
-                          _selBottom == 3
+                          _selBottom == 2
                               ? SvgPicture.asset(
                                   "${imagePath}cart01.svg",
                                   colorFilter: const ColorFilter.mode(
@@ -523,7 +523,7 @@ class HomePageState extends State<Dashboard>
                   activeColor: colors.primary,
                 ),
                 BottomBarItem(
-                  icon: _selBottom == 4
+                  icon: _selBottom == 3
                       ? SvgPicture.asset(
                           "${imagePath}profile01.svg",
                           colorFilter: const ColorFilter.mode(
