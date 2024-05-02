@@ -159,18 +159,18 @@ class AllCategoryState extends State<AllCategory> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(25.0),
-                        child: SvgPicture.asset(
-                          data == index
-                              ? "${imagePath}popular_sel.svg"
-                              : "${imagePath}popular.svg",
-                          colorFilter: const ColorFilter.mode(
-                              colors.primary, BlendMode.srcIn),
-                        )),
-                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: ClipRRect(
+                  //       borderRadius: BorderRadius.circular(25.0),
+                  //       child: SvgPicture.asset(
+                  //         data == index
+                  //             ? "${imagePath}popular_sel.svg"
+                  //             : "${imagePath}popular.svg",
+                  //         colorFilter: const ColorFilter.mode(
+                  //             colors.primary, BlendMode.srcIn),
+                  //       )),
+                  // ),
                   Text(
                     "${capitalize(catList[index].name!.toLowerCase())}\n",
                     textAlign: TextAlign.center,
@@ -206,50 +206,50 @@ class AllCategoryState extends State<AllCategory> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Expanded(
-                      child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      width: deviceWidth! / 4,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).cardColor,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .fontColor
-                                .withOpacity(0.042),
-                            spreadRadius: 2,
-                            blurRadius: 13,
-                            offset: const Offset(
-                                0, 0), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child: CircleAvatar(
-                          radius: 45.0,
-                          backgroundColor: Theme.of(context).colorScheme.white,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(45),
-                            child: networkImageCommon(
-                                catList[index].image!,
-                                50,
-                                width: deviceWidth! / 7.8,
-                                height: double.maxFinite,
-                                false),
-                          )
-                          /*CachedNetworkImage(
-                            imageUrl: catList[index].image!,
-                            fadeInDuration: const Duration(milliseconds: 150),
-                            fit: BoxFit.fill,
-                            errorWidget: (context, error, stackTrace) =>
-                                erroWidget(50),
-                            placeholder: (context,url) { return placeHolder(50);}
-                          )*/
-                          ),
-                    ),
-                  )),
+                  // Expanded(
+                  //     child: Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: Container(
+                  //     width: deviceWidth! / 4,
+                  //     decoration: BoxDecoration(
+                  //       color: Theme.of(context).cardColor,
+                  //       shape: BoxShape.circle,
+                  //       boxShadow: [
+                  //         BoxShadow(
+                  //           color: Theme.of(context)
+                  //               .colorScheme
+                  //               .fontColor
+                  //               .withOpacity(0.042),
+                  //           spreadRadius: 2,
+                  //           blurRadius: 13,
+                  //           offset: const Offset(
+                  //               0, 0), // changes position of shadow
+                  //         ),
+                  //       ],
+                  //     ),
+                  //     child: CircleAvatar(
+                  //         radius: 45.0,
+                  //         backgroundColor: Theme.of(context).colorScheme.white,
+                  //         child: ClipRRect(
+                  //           borderRadius: BorderRadius.circular(45),
+                  //           child: networkImageCommon(
+                  //               catList[index].image!,
+                  //               50,
+                  //               width: deviceWidth! / 7.8,
+                  //               height: double.maxFinite,
+                  //               false),
+                  //         )
+                  //         /*CachedNetworkImage(
+                  //           imageUrl: catList[index].image!,
+                  //           fadeInDuration: const Duration(milliseconds: 150),
+                  //           fit: BoxFit.fill,
+                  //           errorWidget: (context, error, stackTrace) =>
+                  //               erroWidget(50),
+                  //           placeholder: (context,url) { return placeHolder(50);}
+                  //         )*/
+                  //         ),
+                  //   ),
+                  // )),
                   Text(
                     "${capitalize(catList[index].name!.toLowerCase())}\n",
                     textAlign: TextAlign.center,

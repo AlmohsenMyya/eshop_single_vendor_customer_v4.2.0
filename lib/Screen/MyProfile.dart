@@ -13,6 +13,7 @@ import 'package:eshop/Provider/SettingProvider.dart';
 import 'package:eshop/Provider/UserProvider.dart';
 import 'package:eshop/Screen/Customer_Support.dart';
 import 'package:eshop/Screen/ReferEarn.dart';
+import 'package:eshop/Screen/sitting.dart';
 import 'package:eshop/app/languages.dart';
 import 'package:eshop/app/routes.dart';
 import 'package:file_picker/file_picker.dart';
@@ -454,80 +455,82 @@ class StateProfile extends State<MyProfile> with TickerProviderStateMixin {
             : _getDrawerItem(getTranslated(context, 'MY_ORDERS_LBL')!,
                 'assets/images/pro_myorder.svg'),
         // CUR_USERID == "" || CUR_USERID == null ? SizedBox.shrink() : _getDivider(),
-        context.read<UserProvider>().userId == ""
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'MANAGE_ADD_LBL')!,
-                'assets/images/pro_address.svg'),
+        // context.read<UserProvider>().userId == ""
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'MANAGE_ADD_LBL')!,
+        //         'assets/images/pro_address.svg'),
         //CUR_USERID == "" || CUR_USERID == null ? SizedBox.shrink() : _getDivider(),
-        context.read<UserProvider>().userId == ""
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'MYWALLET')!,
-                'assets/images/pro_wh.svg'),
-        context.read<UserProvider>().userId == ""
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'YOUR_PROM_CO')!,
-                'assets/images/promo.svg'),
+        // context.read<UserProvider>().userId == ""
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'MYWALLET')!,
+        //         'assets/images/pro_wh.svg'),
+        // context.read<UserProvider>().userId == ""
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'YOUR_PROM_CO')!,
+        //         'assets/images/promo.svg'),
         // CUR_USERID == "" || CUR_USERID == null ? SizedBox.shrink() : _getDivider(),
-        context.read<UserProvider>().userId == ""
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'MYTRANSACTION')!,
-                'assets/images/pro_th.svg'),
+        // context.read<UserProvider>().userId == ""
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'MYTRANSACTION')!,
+        //         'assets/images/pro_th.svg'),
         // CUR_USERID == "" || CUR_USERID == null ? SizedBox.shrink() : _getDivider(),
 
-        if (disableDarkTheme == false) ...{
-          _getDrawerItem(getTranslated(context, 'CHANGE_THEME_LBL')!,
-              'assets/images/pro_theme.svg'),
-        },
+        // if (disableDarkTheme == false) ...{
+        //   _getDrawerItem(getTranslated(context, 'CHANGE_THEME_LBL')!,
+        //       'assets/images/pro_theme.svg'),
+        // },
 
         // _getDivider(),
         _getDrawerItem(getTranslated(context, 'CHANGE_LANGUAGE_LBL')!,
             'assets/images/pro_language.svg'),
         //  CUR_USERID == "" || CUR_USERID == null ? SizedBox.shrink() : _getDivider(),
-        context.read<UserProvider>().userId == "" ||
-                context.read<UserProvider>().loginType != PHONE_TYPE
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'CHANGE_PASS_LBL')!,
-                'assets/images/pro_pass.svg'),
+        // context.read<UserProvider>().userId == "" ||
+        //         context.read<UserProvider>().loginType != PHONE_TYPE
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'CHANGE_PASS_LBL')!,
+        //         'assets/images/pro_pass.svg'),
         // _getDivider(),
-        context.read<UserProvider>().userId == "" || !refer
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'REFEREARN')!,
-                'assets/images/pro_referral.svg'),
+        // context.read<UserProvider>().userId == "" || !refer
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'REFEREARN')!,
+        //         'assets/images/pro_referral.svg'),
         // CUR_USERID == "" || CUR_USERID == null ? SizedBox.shrink() : _getDivider(),
-        context.read<UserProvider>().userId == ""
-            ? const SizedBox.shrink()
-            : _getDrawerItem(getTranslated(context, 'CUSTOMER_SUPPORT')!,
-                'assets/images/pro_customersupport.svg'),
+        // context.read<UserProvider>().userId == ""
+        //     ? const SizedBox.shrink()
+        //     : _getDrawerItem(getTranslated(context, 'CUSTOMER_SUPPORT')!,
+        //         'assets/images/pro_customersupport.svg'),
         // _getDivider(),
-        context.read<UserProvider>().userId == ''
-            ? const SizedBox()
-            : _getDrawerItem(
-                getTranslated(context, 'CHAT')!, 'assets/images/pro_chat.svg'),
-        _getDrawerItem(getTranslated(context, 'ABOUT_LBL')!,
-            'assets/images/pro_aboutus.svg'),
+        // context.read<UserProvider>().userId == ''
+        //     ? const SizedBox()
+        //     : _getDrawerItem(
+        //         getTranslated(context, 'CHAT')!, 'assets/images/pro_chat.svg'),
+        // _getDrawerItem(getTranslated(context, 'ABOUT_LBL')!,
+        //     'assets/images/pro_aboutus.svg'),
         // _getDivider(),
-        _getDrawerItem(getTranslated(context, 'CONTACT_LBL')!,
-            'assets/images/pro_contact_us.svg'),
+        // _getDrawerItem(getTranslated(context, 'CONTACT_LBL')!,
+        //     'assets/images/pro_contact_us.svg'),
         // _getDivider(),
-        _getDrawerItem(
-            getTranslated(context, 'FAQS')!, 'assets/images/pro_faq.svg'),
+        // _getDrawerItem(
+        //     getTranslated(context, 'FAQS')!, 'assets/images/pro_faq.svg'),
         // _getDivider(),
-        _getDrawerItem(
-            getTranslated(context, 'PRIVACY')!, 'assets/images/pro_pp.svg'),
+        // _getDrawerItem(
+        //     getTranslated(context, 'PRIVACY')!, 'assets/images/pro_pp.svg'),
         // _getDivider(),
-        _getDrawerItem(
-            getTranslated(context, 'TERM')!, 'assets/images/pro_tc.svg'),
-        _getDrawerItem(getTranslated(context, 'SHIPPING_PO_LBL')!,
-            'assets/images/shipping_policy.svg'),
+        // _getDrawerItem(
+        //     getTranslated(context, 'TERM')!, 'assets/images/pro_tc.svg'),
+        // _getDrawerItem(getTranslated(context, 'SHIPPING_PO_LBL')!,
+        //     'assets/images/shipping_policy.svg'),
         // _getDivider(),
-        _getDrawerItem(getTranslated(context, 'RETURN_PO_LBL')!,
-            'assets/images/return_policy.svg'),
+        // _getDrawerItem(getTranslated(context, 'RETURN_PO_LBL')!,
+        //     'assets/images/return_policy.svg'),
+        // // _getDivider(),
+        // _getDrawerItem(
+        //     getTranslated(context, 'RATE_US')!, 'assets/images/pro_rateus.svg'),
         // _getDivider(),
-        _getDrawerItem(
-            getTranslated(context, 'RATE_US')!, 'assets/images/pro_rateus.svg'),
-        // _getDivider(),
-        _getDrawerItem(getTranslated(context, 'SHARE_APP')!,
-            'assets/images/pro_share.svg'),
+        // _getDrawerItem(getTranslated(context, 'SHARE_APP')!,
+        //     'assets/images/pro_share.svg'),
+        _getDrawerItem(getTranslated(context, 'Sitting')!,
+            'assets/images/sitting.svg'),
         context.read<UserProvider>().userId == ""
             ? const SizedBox.shrink()
             : _getDrawerItem(getTranslated(context, 'DEL_ACC_LBL')!, ''),
@@ -581,6 +584,11 @@ class StateProfile extends State<MyProfile> with TickerProviderStateMixin {
             //sendAndRetrieveMessage();
           } else if (title == getTranslated(context, 'MYTRANSACTION')) {
             Navigator.pushNamed(context, Routers.transactionHistoryScreen);
+          } else if (title == getTranslated(context, 'Sitting')) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Sittingnew()),
+            );
           } else if (title == getTranslated(context, 'MYWALLET')) {
             // Navigator.push(
             //     context,

@@ -1579,9 +1579,9 @@ class _HomePageState extends State<HomePage>
           height: 44,
           child: TextField(
             enabled: false,
-            textAlign: TextAlign.left,
+            textAlign: getTranslated(context, 'searchHint') =="ابحث هنا عن المنتجات المطلوبة" ?TextAlign.right :TextAlign.left,
             decoration: InputDecoration(
-                contentPadding: const EdgeInsets.fromLTRB(15.0, 5.0, 0, 5.0),
+                contentPadding: const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 5.0),
                 border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(50.0),
@@ -1593,7 +1593,9 @@ class _HomePageState extends State<HomePage>
                 ),
                 isDense: true,
                 hintText: getTranslated(context, 'searchHint'),
+
                 hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+
                       color: Theme.of(context).colorScheme.fontColor,
                     ),
                 suffixIcon: Padding(

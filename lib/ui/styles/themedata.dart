@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../Helper/Color.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 ThemeData lightTheme = ThemeData(
   useMaterial3: false,
   canvasColor: ThemeData().colorScheme.lightWhite,
@@ -10,10 +10,11 @@ ThemeData lightTheme = ThemeData(
   iconTheme: ThemeData().iconTheme.copyWith(color: colors.primary),
   primarySwatch: colors.primary_app,
   primaryColor: ThemeData().colorScheme.lightWhite,
-  fontFamily: 'OpenSans',
+  fontFamily: GoogleFonts.cairo().fontFamily,
   colorScheme: ColorScheme.fromSwatch(primarySwatch: colors.primary_app)
       .copyWith(secondary: colors.secondary, brightness: Brightness.light),
   textTheme: TextTheme(
+
           titleLarge: TextStyle(
             color: ThemeData().colorScheme.fontColor,
             fontWeight: FontWeight.w600,
@@ -34,7 +35,7 @@ ThemeData darkTheme = ThemeData(
       cursorColor: colors.darkIcon,
       selectionColor: colors.darkIcon,
       selectionHandleColor: colors.darkIcon),
-  fontFamily: 'OpenSans',
+  fontFamily: GoogleFonts.cairo().fontFamily,
   //brightness: Brightness.dark,
   iconTheme: ThemeData().iconTheme.copyWith(color: colors.primary),
   textTheme: TextTheme(
